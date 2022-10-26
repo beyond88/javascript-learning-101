@@ -1,1 +1,1 @@
-# javascript-learning
+# JavScript Learning 101
