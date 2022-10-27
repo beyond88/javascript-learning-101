@@ -52,4 +52,43 @@ document.queryselector("#callback-btn")
 ```
 
 
+<h2 align="center">Higher-order function</h2>
+<p>In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.</p>
+<p>A “higher-order function” is a function that accepts functions as parameters and/or returns a function.</p>
+
+<p>On the other side, the functions that use only primitives or objects as arguments, and only return primitives or objects are named first-order functions.</p>
+
+A. Assign functions to variables:
+```
+// Assign to variables
+const hiFunction = function() { 
+  return 'Hello!' 
+};
+hiFunction(); // => 'Hello!'
+```
+B. Use functions as arguments to other functions:
+```
+// Use as arguments
+function iUseFunction(func) {
+  return func();
+}
+iUseFunction(function () { return 42 }); // => 42
+```
+In the above examples, iUseFunction() is higher-order because it accepts a function as an argument. 
+
+C. And even return functions from functions:
+```
+// Return function from function
+function iReturnFunction() {
+  return function() { return 42 };
+}
+const myFunc = iReturnFunction();
+myFunc(); // => 42
+```
+<p><i>"The functions that use other functions as arguments or return functions are named higher-order functions."</i></p>
+<p>In the previous examples, iUseFunction() is higher-order because it accepts a function as an argument. Also iReturnFunction() is a higher-order function because it returns another function.</p>
+
+<p>In the previous examples, hiFunction() is a first-order function since it simply returns a number.
+
+So, in JavaScript a function can be either first-order or higher-order.</p>
 
