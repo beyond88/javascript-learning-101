@@ -94,3 +94,6 @@ So, in JavaScript a function can be either first-order or higher-order.</p>
 
 <h2 align="center">Event loop</h2>
 
+<p>The event loop is an architectural design pattern that allows code to run asynchronously on the JavaScript engines and makes it possible for code to execute blocking instruction first and when available execute asynchronous function.</p>
+<p>The event loop utilizes there major components, call stack, event queue and web apis. It manages function calls in a way that asynchronous events would go into the event queue and will be called only after the call stack is empty.</p>
+
