@@ -92,3 +92,5 @@ myFunc(); // => 42
 
 So, in JavaScript a function can be either first-order or higher-order.</p>
 
+<h2 align="center">Event loop</h2>
+
