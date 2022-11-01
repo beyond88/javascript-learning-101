@@ -97,3 +97,24 @@ So, in JavaScript a function can be either first-order or higher-order.</p>
 <p>The event loop is an architectural design pattern that allows code to run asynchronously on the JavaScript engines and makes it possible for code to execute blocking instruction first and when available execute asynchronous function.</p>
 <p>The event loop utilizes there major components, call stack, event queue and web apis. It manages function calls in a way that asynchronous events would go into the event queue and will be called only after the call stack is empty.</p>
 
+
+<h2 align="center">Promise vs Observables</h2>
+
+<p>JavaScript is a single-threaded, non-blocking, and asynchronous concurrent language. That means that JavaScript’s engine doesn’t sit and wait for statements to finish. Instead, it moves to the next statement.</p>
+<p>Promises and Observables have a completely different approach to dealing with async code.</p>
+
+<strong>One value vs. multiple values:</strong>
+<p>The biggest difference is that Promises won’t change their value once they have been fulfilled. They can only emit (reject, resolve) a single value. On the other hand, observables can emit multiple results. The subscriber will be receiving results until the observer is completed or unsubscribed from.</p>
+
+<strong>Observable subscriptions are cancellable; promises aren’t</strong>
+<p>Once you start a promise, you can’t cancel it. The callback passed to the Promise constructor will be responsible for resolving or rejecting the promise. The subscriber is passive; once fired, it can just react to the result.
+
+Observables are less passive. Once a subscriber is created, it can opt out of the observer at any time. That makes them useful in scenarios where we are no longer interested in the response.</p>
+
+
+<strong>Eager vs. lazy execution</strong>
+<p>There is a difference in how Observables and Promises are executed. Promises are executed eagerly whilst Observables are executed lazily.</p>
+
+<strong>Eagar:</strong> The Promise callback will execute right away at the constructor level.
+
+<strong>Lazy:</strong> The Producer function will only trigger after there is a subscription created for that Observable. Otherwise, it will stay idle.
