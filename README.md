@@ -118,3 +118,8 @@ Observables are less passive. Once a subscriber is created, it can opt out of th
 <strong>Eagar:</strong> The Promise callback will execute right away at the constructor level.
 
 <strong>Lazy:</strong> The Producer function will only trigger after there is a subscription created for that Observable. Otherwise, it will stay idle.
+
+<strong>Runtime execution</strong>
+The ES Promises, once resolved, will queue the callback in the microtask queue. That means they will be executed after the current macro task has been completed.
+
+With Observables, you can fine-tune the runtime execution using schedulers. A scheduler controls when a subscription starts and when notifications are delivered.
