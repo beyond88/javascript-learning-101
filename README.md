@@ -103,7 +103,7 @@ So, in JavaScript a function can be either first-order or higher-order.</p>
 <p>JavaScript is a single-threaded, non-blocking, and asynchronous concurrent language. That means that JavaScript’s engine doesn’t sit and wait for statements to finish. Instead, it moves to the next statement.</p>
 <p>Promises and Observables have a completely different approach to dealing with async code.</p>
 
-<strong>One value vs. multiple values:</strong>
+<strong>One value vs. multiple values</strong>
 <p>The biggest difference is that Promises won’t change their value once they have been fulfilled. They can only emit (reject, resolve) a single value. On the other hand, observables can emit multiple results. The subscriber will be receiving results until the observer is completed or unsubscribed from.</p>
 
 <strong>Observable subscriptions are cancellable; promises aren’t</strong>
