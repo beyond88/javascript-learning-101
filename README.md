@@ -127,3 +127,6 @@ With Observables, you can fine-tune the runtime execution using schedulers. A sc
 <h2 align="center">Apply vs Bind vs Call</h2>
 <p>
 All three of the call, bind, and apply methods set the this argument to the function. The call and apply methods set this to a function and call the function. The bind method will only set this to a function. We will need to separately invoke the function.</p>
+<p>call() and apply() are identical in functionality, the only difference is that call() accepts a list of arguments; whereas, apply() accepts a single array of arguments.
+The bind method binds the this value to the function and returns a new function. However, we still need to separately invoke the returned function.
+</p>
