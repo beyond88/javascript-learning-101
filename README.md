@@ -123,3 +123,7 @@ Observables are less passive. Once a subscriber is created, it can opt out of th
 The ES Promises, once resolved, will queue the callback in the microtask queue. That means they will be executed after the current macro task has been completed.
 
 With Observables, you can fine-tune the runtime execution using schedulers. A scheduler controls when a subscription starts and when notifications are delivered.
+
+<h2 align="center">Apply vs Bind vs Call</h2>
+<p>
+All three of the call, bind, and apply methods set the this argument to the function. The call and apply methods set this to a function and call the function. The bind method will only set this to a function. We will need to separately invoke the function.</p>
