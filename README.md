@@ -133,6 +133,6 @@ The bind method binds the this value to the function and returns a new function.
 
 <h2 align="center">Promise.all() vs Promise.allSettled()</h2>
 <p>
-<strong>Promise.all()</strong>returns a promise which resolves, when all promises from an array are resolved and gets rejected if one or more promises get rejected.
+<strong>Promise.all()</strong> returns a promise which resolves, when all promises from an array are resolved and gets rejected if one or more promises get rejected.
 <strong>Promise.allSettled()</strong> returns a promise which resolves when all the promises in the array are settled (rejected or resolved).
 </p>
