@@ -136,3 +136,20 @@ The bind method binds the this value to the function and returns a new function.
 <strong>Promise.all()</strong> method takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
 The <strong>Promise.allSettled()</strong> method takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 </p>
+
+<h2 align="center">Hoisting</h2>
+<p>Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration.</p>
+
+```
+// using test before declaring
+console.log(test);   // undefined
+var test;
+```
+
+The above program works and the output will be undefined. The above program behaves as
+
+```
+// using test before declaring
+var test;
+console.log(test); // undefined
+```
