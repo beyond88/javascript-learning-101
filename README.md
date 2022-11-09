@@ -158,5 +158,26 @@ Hoisting is a kind of default behavior in which all the declarations either vari
 
 <h2 align="center">JSONP</h2>
 <p>JSON with Padding, or JSONP for short, is a technique that allows developers to get around browsers' same-origin policies by exploiting the nature of the <script> element.  The policy prohibits reading any responses made by websites with origins other than those currently in use. In addition, the policy allows for the submission of requests but not the reading of them. It's a method of retrieving data that avoids the cross-domain problem.  To accomplish this, the script tag is needed.</p>
+<p>The padding refers the function call that wraps the JSON object.</p>  
+
+```
+{
+  "id": 1,
+  "room": "main bedroom",
+  "items": [ "bed", "chest of drawers" ]
+}
+```
+JSONP:
+
+```
+jsonpcallback({
+  "id": 1,
+  "room": "main bedroom",
+  "items": [ "bed", "chest of drawers" ]
+});
+```
+
+<p>The above 2 codes just has one difference which is the function call jsonpcallback() that is wrapping the JSON.</p>
+<p>JSONP is used to bypass the Cross-Domain Request boundaries, under which the scripts that run on one domain are restricted to access the data from another page on different domain.</p>
 
 
