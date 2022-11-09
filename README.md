@@ -156,4 +156,7 @@ console.log(test); // undefined
 
 Hoisting is a kind of default behavior in which all the declarations either variable declaration or function declaration are moved at the top of the scope just before executing the program's code. However, it can be considered an advantage because all functions and variable declarations are placed to the top of their scope no matter where they are all declared anywhere in the whole program, even regardless of whether they are declared global or local.
 
+<h2 align="center">JSONP</h2>
+<p>JSON with Padding, or JSONP for short, is a technique that allows developers to get around browsers' same-origin policies by exploiting the nature of the <script> element.  The policy prohibits reading any responses made by websites with origins other than those currently in use. In addition, the policy allows for the submission of requests but not the reading of them. It's a method of retrieving data that avoids the cross-domain problem.  To accomplish this, the script tag is needed.</p>
+
 
