@@ -180,4 +180,50 @@ jsonpcallback({
 <p>The above 2 codes just has one difference which is the function call jsonpcallback() that is wrapping the JSON.</p>
 <p>JSONP is used to bypass the Cross-Domain Request boundaries, under which the scripts that run on one domain are restricted to access the data from another page on different domain.</p>
 
+<h2 align="center">Prototype</h2>
+<p>The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and modifiable and object's prototype property (aka attribute) is not visible.
+Every function includes prototype object by default.</p>
 
+
+```
+function ===========> prototype
+```
+
+The prototype object is special type of enumerable object to which additional properties can be attached to it which will be shared across all the instances of it's constructor function.
+
+So, use prototype property of a function in the above example in order to have age properties across all the objects as shown below.
+
+```
+function Employee() {
+    this.name = 'John';
+    this.gender = 'M';
+}
+
+Employee.prototype.age = 29;
+
+var empObj1 = new Employee();
+alert(empObj1.age); // 29
+
+var empObj2 = new Employee();
+alert(empObj2.age); // 29
+```
+
+Every object which is created using literal syntax or constructor syntax with the new keyword, includes __proto__ property that points to prototype object of a function that created this object.
+
+```
+function Employee() {
+    this.name = 'Jehn';
+    this.gender = 'F';
+}
+
+var empObj = new Employee();
+
+console.log(Employee.prototype); // object
+console.log(empObj.prototype); // undefined
+console.log(empObj.__proto__); // object
+
+console.log(typeof Employee.prototype); // object
+console.log(typeof empObj.__proto__); // object
+
+console.log(Employee.prototype === empObj.__proto__ ); // true
+```
