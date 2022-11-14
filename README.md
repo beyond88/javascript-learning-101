@@ -227,3 +227,5 @@ console.log(typeof empObj.__proto__); // object
 
 console.log(Employee.prototype === empObj.__proto__ ); // true
 ```
+
+<strong>The prototype property is special type of enumerable object which cannot be iterate using for..in or foreach loop.</strong>
