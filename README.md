@@ -229,3 +229,27 @@ console.log(Employee.prototype === empObj.__proto__ ); // true
 ```
 
 <strong>The prototype property is special type of enumerable object which cannot be iterate using for..in or foreach loop.</strong>
+
+<h2 align="center">Constructor vs Prototype</h2>
+<p>The constructor is a function that is used to create an object, while the prototype is an object that contains properties and methods that are inherited by objects created from a constructor.</p>
+
+```
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayHello = function() {
+  console.log(`Hello, my name is ${this.name}.`);
+}
+
+const person = new Person('John');
+person.sayHello(); // Hello, my name is John.
+```
+
+<p>
+In the example above, we have a constructor function that takes a name parameter and assigns it to the name property of the object. We also have a prototype method called sayHello, which prints a message to the console.
+
+When we create a new Person object using the constructor function, we can call the sayHello method on it, and it will print the message with the name that we passed into the constructor.
+
+The person object can use the sayHello method because it’s inherited from the prototype of the Person constructor function.
+</p>
