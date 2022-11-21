@@ -299,3 +299,7 @@ button.addEventListener('click', () => {
 ```
 <p>If we click the button, we would get a TypeError. It is because this is not bound to the button, but instead bound to its parent scope.</p>
 
+3. When it makes your code less readable
+
+It is worth taking into consideration the variety of syntax we covered earlier. With regular functions, people know what to expect. With arrow functions, it may be hard to decipher what you are looking at straightaway.
+
