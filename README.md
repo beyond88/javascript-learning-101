@@ -271,3 +271,31 @@ obj.prop = 33;
 console.log(obj.prop);
 // expected output: 42
 ```
+
+<h2 align="center">When you should not use Arrow Functions</h2>
+
+1. Object methods
+
+<p>When you call cat.jumps, the number of lives does not decrease. It is because this is not bound to anything, and will inherit the value of this from its parent scope.<p>
+
+```
+var cat = {
+  lives: 9,
+  jumps: () => {
+    this.lives--;
+  }
+}
+```
+
+2. Callback functions with dynamic context
+
+<p>If you need your context to be dynamic, arrow functions are not the right choice. Take a look at this event handler below:</p>
+
+```
+var button = document.getElementById('press');
+button.addEventListener('click', () => {
+  this.classList.toggle('on');
+});
+```
+<p>If we click the button, we would get a TypeError. It is because this is not bound to the button, but instead bound to its parent scope.</p>
+
