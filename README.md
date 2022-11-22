@@ -303,3 +303,11 @@ button.addEventListener('click', () => {
 
 It is worth taking into consideration the variety of syntax we covered earlier. With regular functions, people know what to expect. With arrow functions, it may be hard to decipher what you are looking at straightaway.
 
+<h2 align="center">Immediately-invoked function expression (IIFE)</h2>
+
+```
+// IIFE
+const message = (function(name) {
+  return 'Hello ' + name + '!';
+})('World');
+```
